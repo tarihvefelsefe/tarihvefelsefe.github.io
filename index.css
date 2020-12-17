@@ -1,0 +1,54 @@
+.header {
+	display: flex;
+	justify-content: center;
+	height: 15vmin;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	height: 80vmin;
+	width: 80vmin;
+	margin: auto;
+}
+
+.main > button {
+	border: none;
+	margin: 3vmin;
+	border-radius: 10%;
+}
+
+.main > button:hover,
+.main > button:focus {
+  box-shadow: 0 0.5vmin 0.5vmin -0.4vmin black;
+  transform: translateY(-0.75vmin);
+}
+
+.kaydol-button {
+	background-color: #f18a21;
+	font: bold extra-condensed 8vmin "Georgia", serif;
+	text-align: center;
+	color: white;
+}
+
+.discord-button {
+	background-color: #7289da;
+}
+
+.instagram-button {
+	background-color: oldlace;
+}
+
+.youtube-button {
+	background-color: red;
+}
+
+.button-image {
+	width: 80%;
+}
