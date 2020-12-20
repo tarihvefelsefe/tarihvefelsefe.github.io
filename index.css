@@ -1,10 +1,23 @@
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+}
+
 .header {
 	display: flex;
 	justify-content: center;
-	height: 15vmin;
+	height: 25vh;
+}
+
+.tft-logo {
+	margin: 3vh;
+	width: min(22vh, 95vw);
 }
 
 .container {
+	height: 75vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -12,16 +25,16 @@
 
 .main {
 	display: grid;
-	grid-template-columns: 50% 50%;
-	height: 80vmin;
-	width: 80vmin;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 5% 5%;
+	height: min(60vh, 120vw);
+	width: min(40vh, 80vw);
 	margin: auto;
 }
 
 .main > button {
 	border: none;
-	margin: 3vmin;
-	border-radius: 10%;
 }
 
 .main > button:hover,
@@ -32,13 +45,19 @@
 
 .kaydol-button {
 	background-color: #f18a21;
-	font: bold extra-condensed 8vmin "Georgia", serif;
+	font: bold extra-condensed min(8vh, 16vw) "Georgia", serif;
 	text-align: center;
 	color: white;
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 
 .discord-button {
 	background-color: #7289da;
+}
+
+.whatsapp-button {
+	background-color: #25D366;
 }
 
 .instagram-button {
