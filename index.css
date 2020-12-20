@@ -27,7 +27,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-	gap: 5% 5%;
+	gap: 5% 7.5%;
 	height: min(60vh, 120vw);
 	width: min(40vh, 80vw);
 	margin: auto;
@@ -43,31 +43,32 @@ body {
   transform: translateY(-0.75vmin);
 }
 
-.kaydol-button {
+#kaydol {
 	background-color: #f18a21;
-	font: bold extra-condensed min(8vh, 16vw) "Georgia", serif;
+	font: bold extra-condensed min(8vh, 16vw) "Verdana", sans-serif;
 	text-align: center;
 	color: white;
 	grid-column-start: 1;
 	grid-column-end: 3;
 }
 
-.discord-button {
-	background-color: #7289da;
-}
-
-.whatsapp-button {
-	background-color: #25D366;
-}
-
-.instagram-button {
-	background-color: oldlace;
-}
-
-.youtube-button {
-	background-color: red;
-}
-
 .button-image {
-	width: 80%;
+	background-size: 80%, 100% !important;
+	background-position: center, center !important;
+}
+
+#discord {
+	background: url(res/discord.svg) no-repeat, #7289da;
+}
+
+#whatsapp {
+	background: url(res/whatsapp.svg) no-repeat, #25D366;
+}
+
+#instagram {
+	background: url(res/instagram.svg) no-repeat, oldlace;
+}
+
+#youtube {
+	background: url(res/youtube.svg) no-repeat, red;
 }
