@@ -3,58 +3,60 @@ body {
 	flex-direction: column;
 	height: 100%;
 	margin: 0;
+	background: gainsboro;
 }
 
-.header {
-	display: flex;
-	justify-content: center;
-	height: 25vh;
-}
-
-.tft-logo {
-	margin: 3vh;
-	width: min(22vh, 95vw);
-}
-
-.container {
-	height: 75vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.main {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	gap: 5% 7.5%;
-	height: min(60vh, 120vw);
-	width: min(40vh, 80vw);
-	margin: auto;
-}
-
-.main > button {
+button {
 	border: none;
 }
 
-.main > button:hover,
-.main > button:focus {
-  box-shadow: 0 0.5vmin 0.5vmin -0.4vmin black;
-  transform: translateY(-0.75vmin);
+button:hover,
+button:focus {
+  transform: scale(103%, 103%);
+  transition: 100ms;
+}
+
+.section {
+	background: whitesmoke;
+	border-radius: 5vmin;
+	padding: 5vmin;
+	box-shadow: 0 0 3px 1px black;
+}
+
+.button-image {
+	background-size: 80% !important;
+	background-position: center, center !important;
+}
+
+#header {
+	display: flex;
+	justify-content: center;
+}
+
+#tft-logo {
+	margin: 3%;
+	width: 25%;
+	padding: 3%;
+	border-radius: 50%;
+}
+
+#main {
+	width: 80%;
+	height: 40vw;
+	margin: auto;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2vw 2vw;
 }
 
 #kaydol {
 	background-color: #f18a21;
-	font: bold extra-condensed min(8vh, 16vw) "Verdana", sans-serif;
+	font: bold normal 12vw "Droid Sans", sans-serif;
 	text-align: center;
 	color: white;
 	grid-column-start: 1;
-	grid-column-end: 3;
-}
-
-.button-image {
-	background-size: 80%, 100% !important;
-	background-position: center, center !important;
+	grid-column-end: 5;
 }
 
 #discord {
@@ -66,9 +68,35 @@ body {
 }
 
 #instagram {
-	background: url(res/instagram.svg) no-repeat, oldlace;
+	background:
+		url(res/instagram.svg) no-repeat center/80%, 
+		radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
+		radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+		linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100% 100%)
+		!important;
 }
 
 #youtube {
 	background: url(res/youtube.svg) no-repeat, red;
+}
+
+#about {
+	margin: 3% auto 20% auto;
+	width: 80%;
+	font: normal 2.5vw "Droid Sans", sans-serif;
+	color: #080040;
+}
+
+#about > h1 {
+	font: bold normal 4vw "Droid Sans", sans-serif;
+	text-align: center;
+}
+
+#about > * {
+	margin: 5% 5%;
 }
