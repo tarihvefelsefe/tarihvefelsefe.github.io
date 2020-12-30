@@ -19,7 +19,7 @@ body {
 	flex-direction: column;
 	height: 100%;
 	margin: 0;
-	background: gainsboro;
+	background: url("res/tft-arkaplan.svg");
 }
 
 button {
@@ -32,7 +32,19 @@ button:focus {
   transition: 100ms;
 }
 
+h1 {
+	font: bold normal 2rem "Droid Sans", sans-serif;
+	text-align: center;
+}
+
+p {
+	font: normal 1.25rem "Droid Sans", sans-serif;
+	color: #080040;
+}
+
 .section {
+	width: 40rem;
+	margin: 1rem auto;
 	background: whitesmoke;
 	border-radius: 2rem;
 	padding: 2rem;
@@ -56,10 +68,17 @@ button:focus {
 	border-radius: 50%;
 }
 
+#quote > p {
+	font: italic 1.5rem "Droid Sans", sans-serif;
+	text-align: center;
+}
+
+#quote > * {
+	margin: 1rem 1rem;
+}
+
 #main {
-	width: 40rem;
 	height: 20rem;
-	margin: auto;
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: repeat(4, 1fr);
@@ -101,18 +120,6 @@ button:focus {
 	background: url(res/youtube.svg) no-repeat, red;
 }
 
-#about {
-	margin: 1rem auto 5rem auto;
-	width: 40rem;
-	font: normal 1.25rem "Droid Sans", sans-serif;
-	color: #080040;
-}
-
-#about > h1 {
-	font: bold normal 2rem "Droid Sans", sans-serif;
-	text-align: center;
-}
-
-#about > * {
+#about > p {
 	margin: 2rem 1rem;
 }
