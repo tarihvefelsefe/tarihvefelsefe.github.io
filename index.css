@@ -20,6 +20,7 @@ body {
 	height: 100%;
 	margin: 0;
 	background: url("res/tft-arkaplan.svg");
+	background-size: 16rem 16rem;
 }
 
 button {
