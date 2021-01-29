@@ -29,8 +29,8 @@ button {
 
 button:hover,
 button:focus {
-  transform: scale(103%, 103%);
-  transition: 100ms;
+	box-shadow: 0 0 0.4rem 0.1rem black;
+	transition: 50ms;
 }
 
 h1 {
@@ -68,6 +68,7 @@ p {
 	height: 10rem;
 	padding: 1rem;
 	border-radius: 50%;
+	background-size: 80%;
 }
 
 #quote > p {
@@ -80,10 +81,10 @@ p {
 }
 
 #main {
-	height: 20rem;
+	height: 16rem;
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	gap: 1rem 1rem;
 }
 
@@ -93,7 +94,7 @@ p {
 	text-align: center;
 	color: white;
 	grid-column-start: 1;
-	grid-column-end: 5;
+	grid-column-end: 6;
 }
 
 #discord {
@@ -120,6 +121,10 @@ p {
 
 #youtube {
 	background: url(res/youtube.svg) no-repeat, red;
+}
+
+#twitter {
+	background: url(res/twitter.svg) no-repeat, #1DA1F2;
 }
 
 #about > p {
