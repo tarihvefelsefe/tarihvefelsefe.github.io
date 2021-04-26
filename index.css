@@ -43,9 +43,14 @@ p {
 	color: #080040;
 }
 
+a {
+	font: normal 1.25rem "Droid Sans", sans-serif;
+	color: #1800b1;
+}
+
 .section {
 	width: 40rem;
-	margin: 1rem auto;
+	margin: 0.4rem auto;
 	background: whitesmoke;
 	border-radius: 2rem;
 	padding: 2rem;
@@ -127,6 +132,12 @@ p {
 	background: url(res/twitter.svg) no-repeat, #1DA1F2;
 }
 
-#about > p {
+#about > p,a,.section-divider {
 	margin: 2rem 1rem;
+}
+
+#about > .section-divider {
+	height: 2px;
+	border-radius: 40%;
+	background-color: #080040;
 }
