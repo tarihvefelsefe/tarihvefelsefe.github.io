@@ -1,11 +1,6 @@
 html {
-	font-size: 16px;
-}
-
-@media only screen and (max-width: 1366px) {
-	html {
-		font-size: 12px;
-	}
+	font-size: 12px;
+	scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 600px) {
@@ -14,52 +9,102 @@ html {
 	}
 }
 
+@keyframes background-animation {
+	0% { background-color: #f2f2f2; }
+	30% { background-color: #f0e2a4; }
+	70% { background-color: #f0e2a4; }
+	100% { background-color: #f2f2f2; }
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	margin: 0;
-	background: url("res/tft-arkaplan.svg");
+	background: url("res/tft-arkaplan.svg") #f2f2f2;
 	background-size: 16rem 16rem;
+	animation-name: background-animation;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
 }
 
-button {
-	border: none;
-}
-
-button:hover,
-button:focus {
-	box-shadow: 0 0 0.4rem 0.1rem black;
-	transition: 50ms;
+#bg {
+	width: 12rem;
 }
 
 h1 {
-	font: bold normal 2rem "Droid Sans", sans-serif;
+	font: bold normal 2.5rem "Droid Sans", sans-serif;
 	text-align: center;
 }
 
 p {
-	font: normal 1.25rem "Droid Sans", sans-serif;
+	font: normal 1.5rem "Droid Sans", sans-serif;
 	color: #080040;
 }
 
 a {
-	font: normal 1.25rem "Droid Sans", sans-serif;
+	font: normal 1.5rem "Droid Sans", sans-serif;
 	color: #1800b1;
 }
 
 .section {
 	width: 40rem;
-	margin: 0.4rem auto;
-	background: whitesmoke;
-	border-radius: 2rem;
-	padding: 2rem;
+	margin: 1rem auto 0 auto;
+	background: #f7f7f7;
+	border-radius: 0.5rem;
+	padding: 2rem 1rem;
 	box-shadow: 0 0 0.2rem 0.05rem black;
 }
 
-.button-image {
+.section p, .section h1 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.social-button {
+	border: none;
+}
+
+.social-button:hover,
+.social-button:focus {
+	box-shadow: 0 0 0.5rem 0.25rem darkgray;
+	transition: 75ms;
+}
+
+.social-button-circle {
+	width: 7rem;
+	height: 7rem;
 	background-size: 80% !important;
 	background-position: center, center !important;
+}
+
+.link-button {
+	display: flex;
+	width: 100%;
+	padding: 1rem;
+	margin-top: 1rem;
+	border: none;
+	font: bold normal 1.5rem "Droid Sans", sans-serif;
+	justify-content: center;
+}
+
+.link-logo {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	background-size: 100% !important;
+	background-position: 50% 30% !important;
+	margin-right: 1rem;
+}
+
+.youtube-link {
+	background-color: red;
+	color: white;
+}
+
+.pdf-link {
+	background-color: #f40f02;
+	color: white;
 }
 
 #header {
@@ -76,19 +121,28 @@ a {
 	background-size: 80%;
 }
 
+#quote {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 #quote > p {
 	font: italic 1.5rem "Droid Sans", sans-serif;
 	text-align: center;
 }
 
-#quote > * {
-	margin: 1rem 1rem;
+#about-button {
+	background-color: #f18a21;
+	font: bold normal 2rem "Droid Sans", sans-serif;
+	text-align: center;
+	color: white;
+	padding: 1rem;
 }
 
-#main {
-	height: 16rem;
+#media-buttons {
+	min-height: 16rem;
 	display: grid;
-	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: repeat(5, 1fr);
 	gap: 1rem 1rem;
 }
@@ -98,19 +152,26 @@ a {
 	font: bold normal 4rem "Droid Sans", sans-serif;
 	text-align: center;
 	color: white;
+	height: 7rem;
 	grid-column-start: 1;
 	grid-column-end: 6;
 }
 
-#discord {
+#kaydol-form {
+	display: none;
+	grid-column-start: 1;
+	grid-column-end: 6;
+}
+
+.discord {
 	background: url(res/discord.svg) no-repeat, #7289da;
 }
 
-#whatsapp {
+.whatsapp {
 	background: url(res/whatsapp.svg) no-repeat, #25D366;
 }
 
-#instagram {
+.instagram {
 	background:
 		url(res/instagram.svg) no-repeat center/80%, 
 		radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
@@ -124,20 +185,37 @@ a {
 		!important;
 }
 
-#youtube {
+.youtube {
 	background: url(res/youtube.svg) no-repeat, red;
 }
 
-#twitter {
+.twitter {
 	background: url(res/twitter.svg) no-repeat, #1DA1F2;
 }
 
-#about > p,a,.section-divider {
-	margin: 2rem 1rem;
+.pdf {
+	background: url(res/pdf.svg) no-repeat, #f40f02;
 }
 
-#about > .section-divider {
-	height: 2px;
-	border-radius: 40%;
+.zoom {
+	background: url(res/zoom.svg) no-repeat, #2d8cff;
+}
+
+.kunye {
+	display: flex;
+}
+
+.kunye :last-child {
+	margin-left: auto;
+}
+
+.afis {
+	width: 100%;
+}
+
+.section-divider {
+	height: 1px;
+	border-radius: 70%;
 	background-color: #080040;
+	margin: 1rem 0;
 }
