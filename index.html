@@ -3,6 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png?version=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png?version=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png?version=1.0">
+    <link rel="manifest" href="/assets/icons/site.webmanifest?version=1.0">
+    <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg?version=1.0" color="#f18a22">
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico?version=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tarih ve Felsefe Topluluğu">
+    <meta property="og:url" content="https://tarihvefelsefe.github.io">
+    <meta property="og:description" content="İlgi alanları Tarih ve Felsefe olan, TOBB ETÜ’lülerin Tarih ve Felsefe alanlarında aydın, münevver ve analitik düşünme yetilerine sahip olmasını hedefleyen bir grup üniversiteli.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@TarihveFelsefe">
+    <meta name="twitter:title" content="Tarih ve Felsefe Topluluğu">
+    <meta name="twitter:description" content="İlgi alanları Tarih ve Felsefe olan, TOBB ETÜ’lülerin Tarih ve Felsefe alanlarında aydın, münevver ve analitik düşünme yetilerine sahip olmasını hedefleyen bir grup üniversiteli.">
+
     <title>Tarih ve Felsefe Topluluğu</title>
     <link rel="stylesheet" href="index.css">
   </head>
@@ -13,21 +34,67 @@
     <blockquote id="quote" class="section">
       <h1>TOBB ETÜ Tarih ve Felsefe Topluluğu</h1>
       <p>İlgi alanları Tarih ve Felsefe olan bir grup üniversiteli.</p>
-      <button id="about-button" class="social-button" onclick="document.getElementById('about').scrollIntoView();">Hakkımızda</button>
+      <button id="about-button" class="social-button" onclick="openableOpen('about', 'about-button', '100%', 'tft-logo');">Hakkımızda</button>
+      <article id="about" class="openable">
+        <h1>Hakkımızda</h1>
+        <p>
+          TOBB ETÜ Tarih ve Felsefe Topluluğu 2012 yılında kurulmuştur.
+        </p>
+        <p>
+          TOBB ETÜ’lülerin Tarih ve Felsefe alanlarında aydın, 
+          münevver ve analitik düşünme yetilerine sahip olmasını 
+          hedefleyen topluluğumuz bu iki alanda seminerler, 
+          sunumlar, tartışmalar, geziler, film gösterimleri 
+          gibi etkinlikler düzenlemektedir.
+        </p>
+        <h1>Yönetim Kurulu</h1>
+        <p>
+          Emin Can Seyran (Başkan)
+        </p>
+        <p>
+          Umut Bayatlı (Başkan Yardımcısı)
+        </p>
+        <p>
+          Beril Kaymak
+        </p>
+        <p>
+          Sevdenur Alkaya
+        </p>
+        <p>
+          Sefa Merve Altay
+        </p>
+        <p>
+          Engin Bolat
+        </p>
+        <p>
+          Osman İdik 
+        </p>
+      </article>
     </blockquote>
     <main>
       <div id="media-buttons" class="section">
-        <button id="kaydol" class="social-button" onclick="window.open('https://forms.gle/Y7aiDw8FemJcmNHM6','_blank')">ÜYE KAYIT FORMU</button><!-- <button id="kaydol" class="social-button" onclick="window.open('https://forms.gle/Y7aiDw8FemJcmNHM6','_blank')">ÜYE KAYIT FORMU</button> -->
-        <div id="kaydol-form"></div>
+        <button id="kaydol" class="social-button openable-button" onclick="openableOpen('kaydol-form', 'kaydol', 'calc(100vh - 21rem)')">ÜYE KAYIT FORMU</button><!-- <button id="kaydol" class="social-button" onclick="window.open('https://forms.gle/Y7aiDw8FemJcmNHM6','_blank')">ÜYE KAYIT FORMU</button> -->
+        <iframe class="openable" id="kaydol-form" src="https://docs.google.com/forms/d/e/1FAIpQLSefZlHjwtrYBHB-Pf9WgV8UFZw4SOK5f2EhX_xHosY5QhuRmA/viewform?embedded=true" width="100%" height="100%" loading="lazy">Yükleniyor…</iframe>
         <button class="discord social-button social-button-circle" onclick="window.open('https://discord.gg/yHtXwezqmA','_blank')">
         <button class="whatsapp social-button social-button-circle" onclick="window.open('https://chat.whatsapp.com/GKaAA4PHTTM42u1iAD987S','_blank')">
         <button class="instagram social-button social-button-circle" onclick="window.open('https://www.instagram.com/tarihvefelsefetoplulugu/','_blank')">
         <button class="youtube social-button social-button-circle" onclick="window.open('https://www.youtube.com/channel/UCMZ-tWt0F2hYusNb2zGLFIg','_blank')">
         <button class="twitter social-button social-button-circle" onclick="window.open('https://twitter.com/tarihvefelsefe?lang=tr','_blank')">
         </div>
-      <article class="section">
-        <h1>Tarih Bölümü Lisans Bitirme Tezi Sunumları</h1>
+      <article id="bi-kahve-etkinlik" class="section">
+        <img src="res/bi.gif" alt="Bi Kahve" style="width:100%">
         <div class="section-divider"></div>
+        <p>Merhaba arkadaşlar,</p>
+        <p>Öncelikle, Ortam'21 ile aramıza katılan arkadaşlarımıza hoş geldiniz diyoruz. </p>
+        <p>1.5 senelik online etkinliklerimizden sonra sizinle yüz yüze tanışmak için Beştepe Moment içerisindeki Arabica Coffe House'da bir tanışma kahvesi/toplantısı yapıyoruz. Topluluk hakkında bilgi almak isteyen, sosyalleşmek isteyen veya sadece sohbet etmek isteyen arkadaşlarımızı toplantımıza bekliyoruz. Katılımcı sayımızı belirleyebilmek için aşağıdaki formu doldurmanızı da rica ediyoruz.</p>
+        <p>Etkinliğimiz hakkındaki detayları yukarıdaki afişten öğrenebilirsiniz. Cuma günü 16:30'da görüşmek üzere...</p>
+        <div class="section-divider"></div>
+        <iframe width="100%" style="border:none" id="gmap_canvas" src="https://maps.google.com/maps?q=Be%C5%9Ftepe,%2031.%20Sk.%20No:12,%2006560,%2006560%20Yenimahalle/Ankara&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+        <div class="section-divider"></div>
+        <button class="link-button openable-button" id="bi-kahve" onclick="openableOpen('bi-kahve-form', 'bi-kahve');">ETKİNLİĞE KAYDOL</button>
+        <iframe class="openable" id="bi-kahve-form" src="https://docs.google.com/forms/d/e/1FAIpQLSf8Q3v6rWvyGT4e-cSR-WxadMHZbybViOTwHNeCCEmDWcdTww/viewform?embedded=true" width="100%" height="100%" loading="lazy">Yükleniyor…</iframe>
+      </article>
+      <article class="section">
         <img class="afis" src="https://cdn.discordapp.com/attachments/793490433703280660/836204029540433920/GENEL_PAFTA.png" alt="Tarih Bölümü Tez Sunumları">
         <div class="section-divider"></div>
         <div class="kunye">
@@ -114,42 +181,29 @@
           Makale
         </button>
       </article>
-      <article id="about" class="section">
-        <h1>Hakkımızda</h1>
-        <p>
-          TOBB ETÜ Tarih ve Felsefe Topluluğu 2012 yılında kurulmuştur.
-        </p>
-        <p>
-          TOBB ETÜ’lülerin Tarih ve Felsefe alanlarında aydın, 
-          münevver ve analitik düşünme yetilerine sahip olmasını 
-          hedefleyen topluluğumuz bu iki alanda seminerler, 
-          sunumlar, tartışmalar, geziler, film gösterimleri 
-          gibi etkinlikler düzenlemektedir.
-        </p>
-        <h1>Yönetim Kurulu</h1>
-        <p>
-          Emin Can Seyran (Başkan)
-        </p>
-        <p>
-          Umut Bayatlı (Başkan Yardımcısı)
-        </p>
-        <p>
-          Beril Kaymak
-        </p>
-        <p>
-          Sevdenur Alkaya
-        </p>
-        <p>
-          Sefa Merve Altay
-        </p>
-        <p>
-          Engin Bolat
-        </p>
-        <p>
-          Osman İdik 
-        </p>
-      </article>
-      <div style="height: calc(100vh - 60rem);"></div>
     </main>
+    <script>
+      function openableOpen(form, button = null, form_height = "calc(100vh - 9rem)", close = null) {
+        f = document.getElementById(form);
+
+        if (f.style.visibility == "visible") {
+          f.style.visibility = "hidden";
+          f.style.height = 0;
+        }
+        else {
+          f.style.visibility = "visible";
+          f.style.height = form_height;
+        }
+
+        if (button !== null) {
+          if (close !== null && f.style.visibility == "hidden") {
+            document.getElementById(close).scrollIntoView();
+          }
+          else {
+            document.getElementById(button).scrollIntoView();
+          }
+        }
+      }
+    </script>
   </body>
 </html>
