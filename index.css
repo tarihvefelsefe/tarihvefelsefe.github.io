@@ -103,6 +103,11 @@ a {
 	margin-right: 1rem;
 }
 
+.zoom-link {
+	background-color: #2d8cff;
+	color: white;
+}
+
 .youtube-link {
 	background-color: red;
 	color: white;
