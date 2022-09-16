@@ -64,6 +64,7 @@ a {
 }
 
 .social-button {
+	border-radius: 0.5rem;
 	border: none;
 	scroll-margin-top: 1.5rem;
 }
@@ -81,6 +82,26 @@ a {
 	height: 7rem;
 	background-size: 80% !important;
 	background-position: center, center !important;
+}
+
+.social-link-button {
+	display: flex;
+	width: 100%;
+	padding: 1rem;
+	margin-top: 1rem;
+	border: none;
+	font: bold normal 2.5rem "Droid Sans", sans-serif;
+	justify-content: center;
+	scroll-margin-top: 1.5rem;
+}
+
+.social-logo {
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	background-size: 100% !important;
+	background-position: 50% 30% !important;
+	margin-right: 1rem;
 }
 
 .link-button {
@@ -113,6 +134,35 @@ a {
 	color: white;
 }
 
+.whatsapp-link {
+	background-color: #25D366;
+	color: white;
+}
+
+.discord-link {
+	background-color: #7289da;
+	color: white;
+}
+
+.twitter-link {
+	background-color: #1DA1F2;
+	color: white;
+}
+
+.instagram-link {
+	background:
+		radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
+		radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
+		radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+		linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100% 100%)
+		!important;
+	color: white;
+}
+
 .pdf-link {
 	background-color: #f40f02;
 	color: white;
@@ -125,6 +175,10 @@ a {
 	margin: 0;
 	padding: 0;
 }
+
+/* .openable-button::after {
+	content: " ▼";
+} */
 
 #header {
 	display: flex;
@@ -163,7 +217,7 @@ a {
 #media-buttons {
 	min-height: 16rem;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: 1fr;
 	gap: 1rem 1rem;
 }
 
@@ -173,14 +227,7 @@ a {
 	text-align: center;
 	color: white;
 	height: 7rem;
-	grid-column-start: 1;
-	grid-column-end: 6;
 	scroll-margin-top: 2.5rem;
-}
-
-#kaydol-form {
-	grid-column-start: 1;
-	grid-column-end: 6;
 }
 
 .discord {
@@ -193,16 +240,7 @@ a {
 
 .instagram {
 	background:
-		url(res/instagram.svg) no-repeat center/80%, 
-		radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
-		radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
-		radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
-		radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
-		radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
-		radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
-		radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
-		linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100% 100%)
-		!important;
+		url(res/instagram.svg) no-repeat center/80%;
 }
 
 .youtube {
